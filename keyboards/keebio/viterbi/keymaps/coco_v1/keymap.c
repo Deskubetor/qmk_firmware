@@ -16,9 +16,7 @@ enum custom_keycodes {
   LOWER,
   RAISE,
   ADJUST,
-  WARLIZ
 };
-
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -90,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, RESET  , RGB_TOG, RGB_MOD, RGB_HUD, RGB_HUI,     RGB_SAD, RGB_SAI, RGB_VAD, RGB_VAI, _______, KC_DEL,  _______,
     _______, _______, _______, _______, AU_ON,   AU_OFF , AG_NORM,     AG_SWAP, QWERTY , _______, _______, _______, _______, _______,
     _______, _______, _______, BL_TOGG, BL_STEP, BL_ON  , BL_OFF ,     BL_INC , BL_DEC , _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______, WARLIZ ,     _______, _______, _______, _______, _______, _______, _______
+    _______, _______, _______, _______, _______, _______, _______,     _______, _______, _______, _______, _______, _______, _______
   )
 
 };
@@ -131,12 +129,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
-	/*case WARLIZ:
-	  if(record->event.pressed) {
-		//send_unicode_hex_string("0CA0");
-	  }
-	  return false;
-	  break;*/
   }
   return true;
 }
